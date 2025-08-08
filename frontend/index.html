@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Product Scraper</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <i class="fab fa-amazon"></i>
+            <h1>Product Scraper</h1>
+          </div>
+          <p class="subtitle">Extraia dados de produtos da Amazon de forma rápida e fácil</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container">
+        <!-- Search Section -->
+        <section class="search-section">
+          <div class="search-card">
+            <h2>Pesquisar Produtos</h2>
+            <p>Digite uma palavra-chave para encontrar produtos na Amazon</p>
+            
+            <form id="searchForm" class="search-form">
+              <div class="form-group">
+                <label for="keyword">Palavra-chave</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-search"></i>
+                  <input 
+                    type="text" 
+                    id="keyword" 
+                    name="keyword" 
+                    placeholder="Ex: notebook, celular, livros..."
+                    required
+                  />
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="maxProducts">Número máximo de produtos</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-list-ol"></i>
+                  <select id="maxProducts" name="maxProducts">
+                    <option value="10">10 produtos</option>
+                    <option value="20" selected>20 produtos</option>
+                    <option value="30">30 produtos</option>
+                    <option value="50">50 produtos</option>
+                  </select>
+                </div>
+              </div>
+              
+              <button type="submit" class="search-btn" id="searchBtn">
+                <i class="fas fa-search"></i>
+                <span>Buscar Produtos</span>
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Loading Section -->
+        <section id="loadingSection" class="loading-section hidden">
+          <div class="loading-card">
+            <div class="loading-spinner">
+              <i class="fas fa-spinner fa-spin"></i>
+            </div>
+            <h3>Buscando produtos...</h3>
+            <p>Aguarde enquanto extraímos os dados da Amazon</p>
+          </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="resultsSection" class="results-section hidden">
+          <div class="results-header">
+            <h2>Resultados da Pesquisa</h2>
+            <div class="results-info">
+              <span id="resultsCount">0 produtos encontrados</span>
+              <span id="executionTime"></span>
+            </div>
+          </div>
+          
+          <div id="productsGrid" class="products-grid">
+            <!-- Products will be inserted here -->
+          </div>
+        </section>
+
+        <!-- Error Section -->
+        <section id="errorSection" class="error-section hidden">
+          <div class="error-card">
+            <div class="error-icon">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h3>Ops! Algo deu errado</h3>
+            <p id="errorMessage">Ocorreu um erro durante a busca. Tente novamente.</p>
+            <button id="retryBtn" class="retry-btn">
+              <i class="fas fa-redo"></i>
+              Tentar Novamente
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Amazon Product Scraper. Desenvolvido por</p>
+  <p><a href="https://github.com/Xande025" target="_blank" rel="noopener noreferrer">Xande025</a></p>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
+
