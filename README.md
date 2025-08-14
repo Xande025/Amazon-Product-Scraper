@@ -368,37 +368,5 @@ amazon-scraper/
 4. **Testes Automatizados**
    - Testes unitários para funções de scraping
    - Testes de integração da API
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Para contribuir:
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-### Diretrizes de Contribuição
-
-- Mantenha o código limpo e bem documentado
-- Adicione testes para novas funcionalidades
-- Siga as convenções de código existentes
-- Atualize a documentação quando necessário
-
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## 📞 Suporte
-
-Se você encontrar problemas ou tiver dúvidas:
-
-1. Verifique a seção de [Limitações](#limitações-e-considerações)
-2. Consulte os logs do backend para erros detalhados
-3. Abra uma issue no repositório do projeto
-
----
-
-**Desenvolvido com ❤️ por [Manus AI](https://manus.ai)**
+        
 
